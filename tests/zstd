@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Эмулятор zstd для интеграционных тестов (реализован через gzip).
+# Поддерживает формы вызова, используемые программой:
+#   zstd -c -N -q   (сжатие stdin -> stdout)
+#   zstd -d -c -q   (распаковка stdin -> stdout)
+#   zstd -t -q      (тест целостности stdin)
+#   zstd --version
+set -u
+case "${1:-}" in
+  --version)
+    echo "*** zstd command line interface shim (gzip-backed) v1.5.5"
+    exit 0;;
+  -c)
+    exec gzip -c;;
+  -d)
+    exec gzip -d -c;;
+  -t)
+    exec gzip -t;;
+  *)
+    echo "zstd shim: unknown arguments: $*" >&2
+    exit 1;;
+esac

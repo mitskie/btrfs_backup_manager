@@ -1,0 +1,269 @@
+#!/usr/bin/env bash
+# Эмулятор btrfs-progs для интеграционных тестов Btrfs Backup Manager.
+# Реализует: --version, send, receive, property get/set, subvolume
+# snapshot/show/delete.
+# Снапшот эмулируется каталогом с маркером .shim-subvolume и данными .shim-data.
+#
+# ТЗ 1.4.8.2 §3.1 (D-1): subvolume, созданный receive, помечается
+# .shim-received (модель received_uuid реального btrfs), а
+# `btrfs property set PATH ro false` для него ОТКАЗЫВАЕТ — дословно
+# как btrfs-progs >= 5.14.2 ("cannot flip ro->rw with received_uuid set,
+# use force option -f ..."). Тесты очистки частичного результата доказывают,
+# что программа НЕ пытается менять ro перед btrfs subvolume delete.
+#
+# Режим полной передачи дерева (BBM_SHIM_STREAM_TAR=1, v1.4.4): send
+# выводит tar всего дерева снапшота (без .shim-маркеров), receive
+# распаковывает его — содержимое subvolume переносится пословно (файлы,
+# права, время, симлинки, hardlinks, пустые каталоги). Это позволяет
+# проверять восстановление НА УРОВНЕ СОДЕРЖИМОГО (манифест, ТЗ 7.3/7.10)
+# без реальной Btrfs. Формат потока помечается строкой STREAM-FORMAT=tar,
+# поэтому receive детектирует режим независимо от окружения.
+# Поведение по умолчанию (blob-режим через .shim-data) не изменено —
+# на нем работают все прежние автотесты.
+set -u
+cmd="${1:-}"; [ $# -gt 0 ] && shift
+
+case "$cmd" in
+  --version)
+    echo "btrfs-progs v6.6.3-shim"
+    exit 0;;
+
+  send)
+    snap="${1:-}"
+    if [ ! -f "$snap/.shim-subvolume" ]; then
+      echo "ERROR: not a shim subvolume: $snap" >&2
+      exit 1
+    fi
+    if [ "${BBM_SHIM_FAIL_SEND:-0}" = "1" ]; then
+      echo "ERROR: simulated btrfs send failure" >&2
+      exit 1
+    fi
+    # Имитация долгой операции (тест прерывания Ctrl+C): процесс-потомок
+    # sleep позволяет проверить, что при SIGINT не остается «внуков».
+    if [ -n "${BBM_SHIM_SEND_SLEEP:-}" ]; then
+      sleep "${BBM_SHIM_SEND_SLEEP}"
+    fi
+    echo "STREAM-NAME=$(basename "$snap")"
+    if [ "${BBM_SHIM_STREAM_TAR:-0}" = "1" ]; then
+      echo "STREAM-FORMAT=tar"
+      tar -C "$snap" -cf - --xattrs \
+          --exclude='./.shim-subvolume' --exclude='./.shim-readonly' \
+          --exclude='./.shim-data' --exclude='./.shim-fsuuid' .
+      exit 0
+    fi
+    cat "$snap/.shim-data"
+    exit 0;;
+
+  property)
+    # btrfs property get PATH ro | btrfs property set PATH ro true/false
+    action="${1:-}"; [ $# -gt 0 ] && shift
+    path="${1:-}"; [ $# -gt 0 ] && shift
+    if [ ! -f "$path/.shim-subvolume" ]; then
+      echo "ERROR: not a shim subvolume: $path" >&2
+      exit 1
+    fi
+    if [ "$action" = "set" ]; then
+      prop="${1:-}"; value="${2:-}"
+      if [ "$prop" != "ro" ]; then
+        echo "ERROR: object is not compatible with property: $prop" >&2
+        exit 1
+      fi
+      if [ "$value" = "false" ] && [ -f "$path/.shim-received" ]; then
+        # Дословно как btrfs-progs >= 5.14.2: смена ro у subvolume с
+        # received_uuid требует force (-f) и не выполняется по умолчанию
+        echo "ERROR: cannot flip ro->rw with received_uuid set, use force option -f if you really want unset the read-only status. The value of received_uuid is used for incremental send, consider making a snapshot instead. Read more at btrfs-subvolume(8) and Subvolume flags." >&2
+        exit 1
+      fi
+      if [ "$value" = "true" ]; then
+        : > "$path/.shim-readonly"
+      elif [ "$value" = "false" ]; then
+        rm -f "$path/.shim-readonly"
+      else
+        echo "ERROR: invalid value for property: $value" >&2
+        exit 1
+      fi
+      exit 0
+    fi
+    # get (поведение по умолчанию)
+    if [ -f "$path/.shim-readonly" ]; then
+      echo "ro=true"
+    else
+      echo "ro=false"
+    fi
+    exit 0;;
+
+  receive)
+    destdir="${1:-}"
+    first=""
+    IFS= read -r first
+    case "$first" in
+      STREAM-NAME=*) name="${first#STREAM-NAME=}";;
+      *) echo "ERROR: bad shim stream header" >&2; exit 1;;
+    esac
+    if [ -e "$destdir/$name" ]; then
+      echo "ERROR: subvolume exists: $destdir/$name" >&2
+      exit 1
+    fi
+    if [ "${BBM_SHIM_RECEIVE_PARTIAL:-0}" = "1" ]; then
+      # Имитация обрыва receive: subvolume создан, данные записаны
+      # частично, затем ошибка (ТЗ 7.9)
+      mkdir -p "$destdir/$name/partial-data"
+      printf 'partial' > "$destdir/$name/partial-data/blob.bin"
+      : > "$destdir/$name/.shim-subvolume"
+      : > "$destdir/$name/.shim-readonly"
+      : > "$destdir/$name/.shim-received"
+      echo "ERROR: simulated mid-receive failure" >&2
+      exit 1
+    fi
+    if [ "${BBM_SHIM_STREAM_TAR:-0}" = "1" ]; then
+      # Режим дерева: вторая строка заголовка (STREAM-FORMAT=tar),
+      # затем tar всего дерева. Send и receive выполняются в одном
+      # окружении теста, поэтому режим согласован.
+      second=""
+      IFS= read -r second
+      if [ "$second" != "STREAM-FORMAT=tar" ]; then
+        echo "ERROR: expected STREAM-FORMAT=tar header" >&2
+        exit 1
+      fi
+      mkdir -p "$destdir/$name"
+      tar -C "$destdir/$name" -xf - --xattrs
+      rc=$?
+      [ $rc -ne 0 ] && exit $rc
+      : > "$destdir/$name/.shim-subvolume"
+      : > "$destdir/$name/.shim-readonly"
+      : > "$destdir/$name/.shim-received"
+      exit 0
+    fi
+    # Blob-режим (по умолчанию, поведение прежних версий): все данные
+    # потока после заголовка — содержимое .shim-data
+    mkdir -p "$destdir/$name"
+    : > "$destdir/$name/.shim-subvolume"
+    # Реальный btrfs receive из потока read-only снапшота создает
+    # read-only subvolume с received_uuid
+    : > "$destdir/$name/.shim-readonly"
+    : > "$destdir/$name/.shim-received"
+    cat > "$destdir/$name/.shim-data"
+    exit 0;;
+
+  filesystem)
+    # btrfs filesystem show PATH — эмуляция через .shim-fsuuid ближайшего
+    # родительского каталога (одна эмулируемая ФС = один .shim-fsuuid).
+    # BBM_SHIM_FS_SHOW_FAIL_PLAIN=1 (v1.4.6): обычные каталоги (не
+    # .shim-subvolume) получают ответ «not a valid btrfs filesystem» —
+    # поведение части версий btrfs-progs; так проверяется fallback
+    # btrfs_fs_uuid на точку монтирования.
+    action="${1:-}"; [ $# -gt 0 ] && shift
+    path="${1:-}"
+    d="$(cd "$path" 2>/dev/null && pwd)"
+    if [ -z "$d" ]; then
+      echo "ERROR: path not found: $path" >&2
+      exit 1
+    fi
+    if [ "${BBM_SHIM_FS_SHOW_FAIL_PLAIN:-0}" = "1" ]; then
+      # Отказ только для обычных каталогов: путь-владелец .shim-fsuuid
+      # (точка монтирования эмулируемой ФС) и subvolume отвечают успешно
+      owner="$d"
+      have=""
+      while [ "$owner" != "/" ]; do
+        if [ -f "$owner/.shim-fsuuid" ]; then
+          have="$owner"
+          break
+        fi
+        owner="$(dirname "$owner")"
+      done
+      if [ -n "$have" ] && [ "$d" != "$have" ] && \
+         [ ! -f "$d/.shim-subvolume" ]; then
+        echo "ERROR: not a valid btrfs filesystem: $path" >&2
+        exit 1
+      fi
+    fi
+    while [ "$d" != "/" ]; do
+      if [ -f "$d/.shim-fsuuid" ]; then
+        echo "Label: none  uuid: $(cat "$d/.shim-fsuuid")"
+        exit 0
+      fi
+      d="$(dirname "$d")"
+    done
+    echo "ERROR: not a btrfs filesystem: $path" >&2
+    exit 1;;
+
+  subvolume)
+    verb="${1:-}"; [ $# -gt 0 ] && shift
+    case "$verb" in
+      snapshot)
+        ro=0
+        while [ $# -gt 0 ] && [ "${1#-}" != "$1" ]; do
+          [ "$1" = "-r" ] && ro=1
+          shift
+        done
+        src="${1:-}"; dst="${2:-}"
+        if [ ! -f "$src/.shim-subvolume" ]; then
+          echo "ERROR: not a shim subvolume: $src" >&2
+          exit 1
+        fi
+        if [ -e "$dst" ]; then
+          echo "ERROR: destination exists: $dst" >&2
+          exit 1
+        fi
+        if [ "${BBM_SHIM_STREAM_TAR:-0}" = "1" ]; then
+          # Режим дерева: снапшот копирует ПОЛНОЕ содержимое (права,
+          # время, симлинки, hardlinks), как реальный btrfs subvolume snapshot
+          mkdir -p "$dst"
+          cp -a "$src/." "$dst/"
+          : > "$dst/.shim-subvolume"
+          rm -f "$dst/.shim-readonly"
+          [ "$ro" = "1" ] && : > "$dst/.shim-readonly"
+          exit 0
+        fi
+        mkdir -p "$dst"
+        : > "$dst/.shim-subvolume"
+        cp "$src/.shim-data" "$dst/.shim-data"
+        [ "$ro" = "1" ] && : > "$dst/.shim-readonly"
+        exit 0;;
+      show)
+        path="${1:-}"
+        if [ -f "$path/.shim-subvolume" ]; then
+          # Формат соответствует РЕАЛЬНОМУ выводу `btrfs subvolume show`
+          # (ТЗ 1.4.8 §2.2: эмуляция не упрощает формат): Name, UUID,
+          # Parent UUID. UUID детерминированный (из md5 пути), чтобы
+          # проверка subvolume_uuid() давала воспроизводимый результат.
+          hash="$(printf '%s' "$path" | md5sum | tr -d ' ' | cut -c1-32)"
+          uuid="${hash:0:8}-${hash:8:4}-${hash:12:4}-${hash:16:4}-${hash:20:12}"
+          echo "Name: $(basename "$path")"
+          echo "UUID: $uuid"
+          echo "Parent UUID: -"
+          exit 0
+        fi
+        echo "ERROR: not a shim subvolume: $path" >&2
+        exit 1;;
+      delete)
+        path="${1:-}"
+        if [ ! -f "$path/.shim-subvolume" ]; then
+          echo "ERROR: not a shim subvolume: $path" >&2
+          exit 1
+        fi
+        rm -rf "$path"
+        exit 0;;
+      create)
+        # v1.4.6: создание каталога снапшотов как отдельного subvolume
+        # (pathcheck.ensure_snapshot_dir_as_subvolume, ТЗ 3.2)
+        path="${1:-}"
+        if [ -e "$path" ] && [ ! -d "$path" ]; then
+          echo "ERROR: destination exists and is not a directory: $path" >&2
+          exit 1
+        fi
+        if [ -f "$path/.shim-subvolume" ]; then
+          echo "ERROR: subvolume already exists: $path" >&2
+          exit 1
+        fi
+        mkdir -p "$path"
+        : > "$path/.shim-subvolume"
+        echo "Create subvolume OK: $path"
+        exit 0;;
+      *) echo "ERROR: unknown shim subvolume verb: $verb" >&2; exit 1;;
+    esac;;
+
+  *)
+    echo "ERROR: unknown btrfs shim command: $cmd" >&2
+    exit 1;;
+esac

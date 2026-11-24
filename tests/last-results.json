@@ -1,0 +1,2126 @@
+{
+  "started": "2026-11-24T15:11:42",
+  "modules": [
+    {
+      "module": "test_static",
+      "status": "OK",
+      "elapsed_sec": 1.5,
+      "results": [
+        {
+          "status": "PASS",
+          "message": "py_compile: backup_config.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: config.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: configs/btrfs-test-zstd.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: configs/btrfs-test.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/__init__.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/appconfig.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/archive.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/backup.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/compression.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/encryption.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/environment.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/locking.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/logging_setup.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/metadata.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/network.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/pathcheck.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/process.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/report.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/restore.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/retention.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/runid.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/snapshots.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: core/verification.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: main.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/common.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/integration_btrfs.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/integration_restore.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/run_all.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/smoke_ui_pty.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_appconfig.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_backup.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_cli.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_compression.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_config.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_deletion.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_discovery.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_encryption.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_integration.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_metadata.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_network.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_process.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_restore.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_retention.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_snapshots.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_static.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_tui.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_upload_pending.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: tests/test_verification.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: ui/__init__.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: ui/cli.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: ui/common.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: ui/dialogs.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: ui/restore_helpers.py"
+        },
+        {
+          "status": "PASS",
+          "message": "py_compile: ui/tui.py"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт signal в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт ui в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт argparse в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт config в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.process в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.backup в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.network в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт sys в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт ui.dialogs в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.logging_setup в main.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в config.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт backup_config в config.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.appconfig в config.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core в config.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт re в appconfig.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в appconfig.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в appconfig.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в archive.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт subprocess в archive.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в archive.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт re в backup.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в backup.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт time в backup.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт re в compression.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт shutil в compression.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в encryption.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт subprocess в encryption.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт getpass в encryption.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт re в environment.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт tempfile в environment.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт curses в environment.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт shutil в environment.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт sys в environment.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт subprocess в environment.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в environment.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в environment.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в locking.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт fcntl в locking.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в locking.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт sys в logging_setup.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в logging_setup.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт logging в logging_setup.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт logging.handlers в logging_setup.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт re в metadata.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт json в metadata.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в metadata.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в metadata.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт datetime в metadata.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт dataclasses в network.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт shutil в network.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт json в network.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в network.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в network.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт time в network.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт datetime в network.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в pathcheck.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт threading в process.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт signal в process.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт tempfile в process.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт logging в process.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт subprocess в process.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в process.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт time в process.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт json в report.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в report.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в report.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт time в report.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт datetime в report.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в restore.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в restore.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт shutil в restore.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в retention.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в runid.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт time в runid.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт datetime в runid.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт re в snapshots.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт dataclasses в snapshots.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт subprocess в snapshots.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в snapshots.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в snapshots.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в verification.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт hashlib в verification.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в verification.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core в cli.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.process в cli.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.backup в cli.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.network в cli.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт shutil в cli.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в cli.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.logging_setup в cli.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт re в common.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core в common.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.process в common.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.backup в common.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в common.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в common.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.logging_setup в common.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт datetime в common.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт sys в dialogs.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт select в dialogs.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт termios в dialogs.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в dialogs.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в restore_helpers.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.logging_setup в restore_helpers.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core в restore_helpers.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт threading в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт os в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.report в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.process в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт curses в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.encryption в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.network в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт shutil в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт sys в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт textwrap в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт pathlib в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт time в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "импорт core.logging_setup в tui.py — стандартная библиотека"
+        },
+        {
+          "status": "PASS",
+          "message": "requirements.txt не содержит сторонних зависимостей"
+        },
+        {
+          "status": "PASS",
+          "message": "shell=True отсутствует во всей программе (ТЗ 2.2)"
+        },
+        {
+          "status": "PASS",
+          "message": "gpg encrypt использует --passphrase-fd"
+        },
+        {
+          "status": "PASS",
+          "message": "gpg decrypt использует --passphrase-fd"
+        },
+        {
+          "status": "PASS",
+          "message": "пароль передается через os.pipe (без временных файлов)"
+        },
+        {
+          "status": "PASS",
+          "message": "прямой передачи --passphrase в argv нет"
+        },
+        {
+          "status": "PASS",
+          "message": "иерархия ошибок: ConfigError"
+        },
+        {
+          "status": "PASS",
+          "message": "иерархия ошибок: SnapshotError"
+        },
+        {
+          "status": "PASS",
+          "message": "иерархия ошибок: ArchiveError"
+        },
+        {
+          "status": "PASS",
+          "message": "иерархия ошибок: EncryptionError"
+        },
+        {
+          "status": "PASS",
+          "message": "иерархия ошибок: StorageError"
+        },
+        {
+          "status": "PASS",
+          "message": "иерархия ошибок: VerificationError"
+        },
+        {
+          "status": "PASS",
+          "message": "иерархия ошибок: RestoreError"
+        },
+        {
+          "status": "PASS",
+          "message": "иерархия ошибок: OperationAborted"
+        }
+      ]
+    },
+    {
+      "module": "test_network",
+      "status": "OK",
+      "elapsed_sec": 2.9,
+      "results": [
+        {
+          "status": "PASS",
+          "message": "смонтированная шара доступна для записи"
+        },
+        {
+          "status": "PASS",
+          "message": "каталог без активного монтирования — НЕ шара"
+        },
+        {
+          "status": "PASS",
+          "message": "require_network_mount игнорирует CHECK_NETWORK_MOUNT"
+        },
+        {
+          "status": "PASS",
+          "message": "retention: без активного монтирования удаление отменено (ТЗ 9.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "несуществующая точка монтирования -> ошибка"
+        },
+        {
+          "status": "PASS",
+          "message": "тип ФС не совпал -> ошибка"
+        },
+        {
+          "status": "PASS",
+          "message": "архив скопирован во временный файл *.tmp"
+        },
+        {
+          "status": "PASS",
+          "message": "SHA-256 временной копии совпадает"
+        },
+        {
+          "status": "PASS",
+          "message": "tmp переименован в окончательное имя"
+        },
+        {
+          "status": "PASS",
+          "message": "v1.3: файл .sha256 на шаре не создается (сумма в JSON)"
+        },
+        {
+          "status": "PASS",
+          "message": "tmp-файл не остался"
+        },
+        {
+          "status": "PASS",
+          "message": "повторная отправка не создает дубликатов (ТЗ 7.5)"
+        },
+        {
+          "status": "PASS",
+          "message": "существующий архив с другим содержимым не перезаписывается"
+        },
+        {
+          "status": "PASS",
+          "message": "исходный сетевой архив не поврежден"
+        },
+        {
+          "status": "PASS",
+          "message": "SHA-256 копии не совпал -> ошибка отправки"
+        },
+        {
+          "status": "PASS",
+          "message": "неудачная отправка не оставляет временных файлов"
+        },
+        {
+          "status": "PASS",
+          "message": "без метаданных и .sha256 копия не подтверждена"
+        },
+        {
+          "status": "PASS",
+          "message": "сетевые метаданные JSON записаны"
+        },
+        {
+          "status": "PASS",
+          "message": "копия подтверждена: архив + JSON(sha256) + фактический SHA-256"
+        },
+        {
+          "status": "PASS",
+          "message": "legacy .sha256 подтверждает копию (ТЗ 19)"
+        },
+        {
+          "status": "PASS",
+          "message": "поддельный sidecar не подтверждает копию (ТЗ 20.5-4)"
+        },
+        {
+          "status": "PASS",
+          "message": "поврежденная сетевая копия не подтверждена (ТЗ 20.5-7)"
+        },
+        {
+          "status": "PASS",
+          "message": "несуществующий снапшот не подтвержден"
+        },
+        {
+          "status": "PASS",
+          "message": "подтвержденность опознает архивы v1.0 v3 (ТЗ 19)"
+        },
+        {
+          "status": "PASS",
+          "message": "очистка удаляет только *.tmp своего шаблона"
+        },
+        {
+          "status": "PASS",
+          "message": "сетевые метаданные записаны"
+        },
+        {
+          "status": "PASS",
+          "message": "повторная запись тех же метаданных безопасна"
+        },
+        {
+          "status": "PASS",
+          "message": "метаданные чужого содержимого не перезаписывают существующие"
+        },
+        {
+          "status": "PASS",
+          "message": "mountinfo: \\040 раскодируется в пробел"
+        },
+        {
+          "status": "PASS",
+          "message": "mountinfo: \\134 и \\012 раскодируются"
+        },
+        {
+          "status": "PASS",
+          "message": "mountinfo_for выбирает самое глубокое монтирование-префикс"
+        },
+        {
+          "status": "PASS",
+          "message": "mountinfo_for не принимает чужое подмонтирование за свое"
+        },
+        {
+          "status": "PASS",
+          "message": "mountinfo говорит «монтирование», ismount — нет: расхождение -> отказ"
+        },
+        {
+          "status": "PASS",
+          "message": "check=False не отключает проверку монтирования (ТЗ 3.2: настройка не может отключить безопасность)"
+        },
+        {
+          "status": "PASS",
+          "message": "recheck: смонтированная шара подтверждена"
+        },
+        {
+          "status": "PASS",
+          "message": "recheck: не смонтировано -> отказ (ТЗ 3.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "recheck: точка исчезла -> отказ"
+        },
+        {
+          "status": "PASS",
+          "message": "метаданные записаны и подтверждены перечитыванием"
+        },
+        {
+          "status": "PASS",
+          "message": "файл метаданных существует с полем sha256"
+        },
+        {
+          "status": "PASS",
+          "message": "поврежденный sidecar не перезаписывается молча (конфликт)"
+        },
+        {
+          "status": "PASS",
+          "message": "исходное содержимое sidecar сохранено (ТЗ 2)"
+        },
+        {
+          "status": "PASS",
+          "message": "ошибка записи (ENOSPC) -> False"
+        },
+        {
+          "status": "PASS",
+          "message": "основной JSON не оставлен частично записанным"
+        },
+        {
+          "status": "PASS",
+          "message": "временный файл удален после ошибки"
+        },
+        {
+          "status": "PASS",
+          "message": "несериализуемые метаданные -> отказ без записи"
+        },
+        {
+          "status": "PASS",
+          "message": "после отказа файл метаданных не создан"
+        },
+        {
+          "status": "PASS",
+          "message": "перечитывание НЕ подтвердило корректность -> False"
+        },
+        {
+          "status": "PASS",
+          "message": "записанные, но не подтвержденные метаданные остаются на шаре; временный файл не остается"
+        },
+        {
+          "status": "PASS",
+          "message": "после устранения ошибки запись успешна"
+        },
+        {
+          "status": "PASS",
+          "message": "метаданные gzip-архива записаны"
+        },
+        {
+          "status": "PASS",
+          "message": "gzip-архив подтвержден при текущем COMPRESSION=zstd (ТЗ 6.4 п.1)"
+        },
+        {
+          "status": "PASS",
+          "message": "отсутствующая копия gzip не подтверждена (ТЗ 6.4 п.5)"
+        },
+        {
+          "status": "PASS",
+          "message": "метаданные zstd-архива записаны"
+        },
+        {
+          "status": "PASS",
+          "message": "zstd-архив подтвержден при текущем COMPRESSION=gzip (ТЗ 6.4 п.2)"
+        },
+        {
+          "status": "PASS",
+          "message": "смешанная история gzip/zstd: root_2026-03-01_000100_000001 подтвержден (ТЗ 6.4 п.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "смешанная история gzip/zstd: home_2026-03-01_000100_000001 подтвержден (ТЗ 6.4 п.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "поврежденная сетевая копия zstd — снапшот сохранен (ТЗ 6.4 п.6)"
+        },
+        {
+          "status": "PASS",
+          "message": "метаданные с чужой суммой не подтверждают копию (ТЗ 6.4 п.7)"
+        },
+        {
+          "status": "PASS",
+          "message": "конфликтующие метаданные не перезаписываются молча"
+        },
+        {
+          "status": "PASS",
+          "message": "корректные метаданные восстановлены после устранения конфликта"
+        },
+        {
+          "status": "PASS",
+          "message": "network_metadata_index связывает снапшот и точное имя архива"
+        },
+        {
+          "status": "PASS",
+          "message": "поврежденные метаданные не попадают в индекс"
+        },
+        {
+          "status": "PASS",
+          "message": "JSON с ../ не подтверждает файл за пределами сетевой шары"
+        },
+        {
+          "status": "PASS",
+          "message": "symlink на внешний файл не подтверждает сетевую копию"
+        },
+        {
+          "status": "PASS",
+          "message": "ошибка чтения сетевого архива — снапшот сохранен (ТЗ 6.4 п.8)"
+        }
+      ]
+    },
+    {
+      "module": "test_backup",
+      "status": "OK",
+      "elapsed_sec": 11.0,
+      "results": [
+        {
+          "status": "PASS",
+          "message": "20.3-1: без сети созданы оба локальных архива"
+        },
+        {
+          "status": "PASS",
+          "message": "сжатие по config (zstd-шим): расширение .zst.gpg"
+        },
+        {
+          "status": "PASS",
+          "message": "отчет: снапшотов 2, архивов 2"
+        },
+        {
+          "status": "PASS",
+          "message": "20.3-6: статус upload-pending (оба архива)"
+        },
+        {
+          "status": "PASS",
+          "message": "без сети отправок нет"
+        },
+        {
+          "status": "PASS",
+          "message": "метаданные: статус upload-pending (ТЗ 8)"
+        },
+        {
+          "status": "PASS",
+          "message": "20.3: локальный снапшот остается после создания архива"
+        },
+        {
+          "status": "PASS",
+          "message": "созданные снапшоты read-only"
+        },
+        {
+          "status": "PASS",
+          "message": "SHA-256 архива b74643eede1b_home_2026-03-01_000001_000001.zst.gpg зафиксирован и сверяется фактически"
+        },
+        {
+          "status": "PASS",
+          "message": "v1.3: отдельный .sha256 локально не создается"
+        },
+        {
+          "status": "PASS",
+          "message": "SHA-256 архива b74643eede1b_root_2026-03-01_000001_000001.zst.gpg зафиксирован и сверяется фактически"
+        },
+        {
+          "status": "PASS",
+          "message": "v1.3: отдельный .sha256 локально не создается"
+        },
+        {
+          "status": "PASS",
+          "message": "20.3-3: интерактивное подтверждение -> локальный backup"
+        },
+        {
+          "status": "PASS",
+          "message": "20.3-4: отказ пользователя отменяет операцию"
+        },
+        {
+          "status": "PASS",
+          "message": "20.3-4: после отмены архивов нет"
+        },
+        {
+          "status": "PASS",
+          "message": "20.3-4: снапшоты после отмены не созданы"
+        },
+        {
+          "status": "PASS",
+          "message": "20.4-1: архивы отправлены на шару"
+        },
+        {
+          "status": "PASS",
+          "message": "локальный архив удален после подтвержденной отправки (ТЗ 9.4)"
+        },
+        {
+          "status": "PASS",
+          "message": "v1.3: отдельный .sha256 на шаре не создается"
+        },
+        {
+          "status": "PASS",
+          "message": "на шаре есть метаданные со статусом uploaded"
+        },
+        {
+          "status": "PASS",
+          "message": "статус сетевой копии uploaded (JSON)"
+        },
+        {
+          "status": "PASS",
+          "message": "20.4-2: SHA-256 сетевой копии совпадает с JSON"
+        },
+        {
+          "status": "PASS",
+          "message": "отчет: отправлено 2, ожидающих 0"
+        },
+        {
+          "status": "PASS",
+          "message": "AUTO_UPLOAD=false: отправки нет, архивы локальны"
+        },
+        {
+          "status": "PASS",
+          "message": "AUTO_UPLOAD=false: статус upload-pending"
+        },
+        {
+          "status": "PASS",
+          "message": "ошибка отправки -> код ошибки сети (7)"
+        },
+        {
+          "status": "PASS",
+          "message": "20.4-3: ЛОКАЛЬНЫЕ АРХИВЫ СОХРАНЕНЫ при ошибке отправки"
+        },
+        {
+          "status": "PASS",
+          "message": "статус upload-failed зафиксирован"
+        },
+        {
+          "status": "PASS",
+          "message": "архивы после ошибки отправки целы (SHA-256 совпадает)"
+        },
+        {
+          "status": "PASS",
+          "message": "ошибка проверки останавливает backup"
+        },
+        {
+          "status": "PASS",
+          "message": "архив не помечен отправленным при ошибке проверки"
+        },
+        {
+          "status": "PASS",
+          "message": "на шару при ошибке проверки ничего не попало"
+        },
+        {
+          "status": "PASS",
+          "message": "20.3-9: ошибка источника -> отказ до снапшотов"
+        },
+        {
+          "status": "PASS",
+          "message": "сообщение объясняет, что снапшоты не созданы"
+        },
+        {
+          "status": "PASS",
+          "message": "ни одного снапшота не создано (нет частичного backup)"
+        },
+        {
+          "status": "PASS",
+          "message": "архивов нет"
+        },
+        {
+          "status": "SKIP",
+          "message": "20.3: zstd найден вне шим-PATH, проверка невозможна"
+        },
+        {
+          "status": "PASS",
+          "message": "очистка удаляет *.part после прерванной операции"
+        },
+        {
+          "status": "PASS",
+          "message": "очистка не трогает готовые архивы"
+        },
+        {
+          "status": "PASS",
+          "message": "отчет: длительности этапов в человекочитаемом виде"
+        },
+        {
+          "status": "PASS",
+          "message": "отчет: первая строка итога — Итог:"
+        },
+        {
+          "status": "PASS",
+          "message": "отчет: строки итога помещаются на экран 80 колонок (не переносятся и не перекрывают подсказки)"
+        },
+        {
+          "status": "PASS",
+          "message": "отчет: длительности включены в итог для TUI"
+        },
+        {
+          "status": "PASS",
+          "message": "v1.3.1: в TUI отчет передается через reporter.done — без прямого print(), портившего экран"
+        },
+        {
+          "status": "PASS",
+          "message": "в CLI отчет печатается в консоль, включая длительности"
+        },
+        {
+          "status": "PASS",
+          "message": "items_override: недопустимое имя '@' отклоняется до операций"
+        },
+        {
+          "status": "PASS",
+          "message": "items_override: пустой список отклоняется"
+        },
+        {
+          "status": "PASS",
+          "message": "items_override: дубликаты отбрасываются, список нормализован"
+        },
+        {
+          "status": "PASS",
+          "message": "items_override: архив создан только для выбранного раздела"
+        },
+        {
+          "status": "PASS",
+          "message": "items_override: снапшот только выбранного раздела"
+        },
+        {
+          "status": "PASS",
+          "message": "отчет: длительность этапа архивов зафиксирована"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.3: архив создан ЛОКАЛЬНО (без отправки)"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.3: несмонтированный каталог НЕ принял архивы (отправки не было)"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.3: архив получил статус upload-pending"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.2: операция НЕ объявлена успешной при отказе метаданных"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.2: ЛОКАЛЬНЫЙ АРХИВ СОХРАНЕН при ошибке метаданных"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.2: статус upload-failed"
+        },
+        {
+          "status": "PASS",
+          "message": "сетевой архив при этом записан и проверен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.7: повторный upload-pending удалил локальный архив после успешных метаданных"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.7: сетевые метаданные записаны повторно"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед копированием): операция не успешна"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед копированием): локальный архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед копированием): статус upload-failed"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед копированием): временный файл на шаре очищен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед финализацией): операция не успешна"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед финализацией): локальный архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед финализацией): статус upload-failed"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед финализацией): временный файл на шаре очищен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед удалением локального архива): операция не успешна"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед удалением локального архива): локальный архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед удалением локального архива): статус upload-failed"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (обрыв перед удалением локального архива): временный файл на шаре очищен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.6: обрыв перед удалением — не успешна"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.6: удаление локального архива ЗАПРЕЩЕНО"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.6: сетевой архив и метаданные записаны"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.4: ошибка копирования — не успешна"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.4: локальный архив сохранен при обрыве копирования"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 п.4: на шаре не осталось файлов"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: каталоги архивов ограничены выбором текущей операции"
+        },
+        {
+          "status": "PASS",
+          "message": "CLI: профильные каталоги остаются доступны"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: retention ограничен выбранными источниками и каталогами"
+        },
+        {
+          "status": "PASS",
+          "message": "CLI: retention профиля не изменен"
+        },
+        {
+          "status": "PASS",
+          "message": "per-run AUTO_UPLOAD override=false оставляет архив локально"
+        },
+        {
+          "status": "PASS",
+          "message": "per-run override сохраняет статус upload-pending"
+        },
+        {
+          "status": "PASS",
+          "message": "per-run override не меняет конфигурацию CLI/cron"
+        },
+        {
+          "status": "PASS",
+          "message": "per-run AUTO_UPLOAD override=true запускает отправку"
+        },
+        {
+          "status": "PASS",
+          "message": "после подтвержденной отправки локальный архив удален"
+        },
+        {
+          "status": "PASS",
+          "message": "per-run включение не меняет конфигурацию CLI/cron"
+        }
+      ]
+    },
+    {
+      "module": "test_upload_pending",
+      "status": "OK",
+      "elapsed_sec": 7.6,
+      "results": [
+        {
+          "status": "PASS",
+          "message": "ошибка сети -> код ошибки отправки (7)"
+        },
+        {
+          "status": "PASS",
+          "message": "20.4-3: локальный архив сохранен после ошибки"
+        },
+        {
+          "status": "PASS",
+          "message": "на шаре нет частичных артефактов"
+        },
+        {
+          "status": "PASS",
+          "message": "20.4-6: повторная отправка успешна, локальная удалена"
+        },
+        {
+          "status": "PASS",
+          "message": "SHA-256 сетевой копии совпадает с локальным эталоном"
+        },
+        {
+          "status": "PASS",
+          "message": "20.4-7: повторный запуск идемпотентен (без дубликатов)"
+        },
+        {
+          "status": "PASS",
+          "message": "20.4-8: подтвержденные архивы не переотправляются"
+        },
+        {
+          "status": "PASS",
+          "message": "локальный архив на месте до попытки"
+        },
+        {
+          "status": "PASS",
+          "message": "upload-pending без активного монтирования -> отказ (независимо от CHECK_NETWORK_MOUNT)"
+        },
+        {
+          "status": "PASS",
+          "message": "архив сохранен после отказа upload-pending"
+        },
+        {
+          "status": "PASS",
+          "message": "архив без .sha256 отправлен после полной проверки (расшифрование + тест потока)"
+        },
+        {
+          "status": "PASS",
+          "message": "SHA-256 вычислен фактически и совпал на шаре"
+        },
+        {
+          "status": "PASS",
+          "message": "поврежденный архив -> ошибка отправки"
+        },
+        {
+          "status": "PASS",
+          "message": "поврежденный архив сохранен локально (не удален)"
+        },
+        {
+          "status": "PASS",
+          "message": "поврежденный архив не попал на шару"
+        },
+        {
+          "status": "PASS",
+          "message": "NETWORK_ENABLED=false -> отправка отказана"
+        },
+        {
+          "status": "PASS",
+          "message": "архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5: обрыв перед копированием -> ошибка"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (перед копированием): локальный архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (перед копированием): подтвержденных метаданных нет → удаление запрещено"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5: обрыв перед финализацией -> ошибка"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (перед финализацией): локальный архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (перед финализацией): подтвержденных метаданных нет → удаление запрещено"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5: обрыв перед записью метаданных -> ошибка"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (перед записью метаданных): локальный архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (перед записью метаданных): подтвержденных метаданных нет → удаление запрещено"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5: обрыв перед удалением локального архива -> ошибка"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 3.5 (перед удалением локального архива): локальный архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.2: отказ метаданных -> ошибка (отправка не завершена)"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.2: локальный архив сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "сетевой архив есть, метаданных нет"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.7: повторная отправка успешна (без дубликатов)"
+        },
+        {
+          "status": "PASS",
+          "message": "ТЗ 5.4 п.7: метаданные записаны при повторе"
+        },
+        {
+          "status": "PASS",
+          "message": "выбранный архив уже на шаре: подтвержден без передачи"
+        },
+        {
+          "status": "PASS",
+          "message": "совпадающая сетевая копия позволяет штатно удалить локальную"
+        },
+        {
+          "status": "PASS",
+          "message": "содержимое существующего сетевого архива не изменено"
+        },
+        {
+          "status": "PASS",
+          "message": "метаданные существующего сетевого архива подтверждены"
+        },
+        {
+          "status": "PASS",
+          "message": "совпадающий архив без sidecar считается уже переданным"
+        },
+        {
+          "status": "PASS",
+          "message": "совпадающий сетевой архив без sidecar не перезаписан"
+        },
+        {
+          "status": "PASS",
+          "message": "локальная копия удалена после подтверждения совпадающего файла на NAS"
+        },
+        {
+          "status": "PASS",
+          "message": "конфликт SHA-256 блокирует отправку"
+        },
+        {
+          "status": "PASS",
+          "message": "локальный архив сохранен при конфликте"
+        },
+        {
+          "status": "PASS",
+          "message": "существующий сетевой файл не перезаписан"
+        },
+        {
+          "status": "PASS",
+          "message": "ручная отправка затрагивает только выбранный архив"
+        },
+        {
+          "status": "PASS",
+          "message": "на шару отправлен только выбранный архив"
+        },
+        {
+          "status": "PASS",
+          "message": "предварительная проверка допускает оба новых архива"
+        },
+        {
+          "status": "PASS",
+          "message": "пакетная ручная отправка передала оба выбранных архива"
+        },
+        {
+          "status": "PASS",
+          "message": "локальные копии удалены только после подтверждения передачи"
+        },
+        {
+          "status": "PASS",
+          "message": "предварительная проверка отделяет конфликт от доступного архива"
+        },
+        {
+          "status": "PASS",
+          "message": "предварительная проверка не меняет существующий сетевой файл"
+        },
+        {
+          "status": "PASS",
+          "message": "ручной выбор допускает файл вне каталогов фонового поиска"
+        }
+      ]
+    },
+    {
+      "module": "test_tui",
+      "status": "OK",
+      "elapsed_sec": 0.8,
+      "results": [
+        {
+          "status": "PASS",
+          "message": "20.7-2: в нетерминальной среде TUI не запускается (fallback на простой CLI)"
+        },
+        {
+          "status": "PASS",
+          "message": "curses_available() не падает при отсутствии curses"
+        },
+        {
+          "status": "PASS",
+          "message": "CollectReporter: буфер ограничен MAX_LINES=400, ошибок потоков нет (получено 400)"
+        },
+        {
+          "status": "PASS",
+          "message": "CollectReporter: последний этап зафиксирован"
+        },
+        {
+          "status": "PASS",
+          "message": "TuiConfirm: вопрос дошел до главного потока"
+        },
+        {
+          "status": "PASS",
+          "message": "TuiConfirm: ответ вернулся в поток"
+        },
+        {
+          "status": "PASS",
+          "message": "AbortFlag: до request ожидание продолжается"
+        },
+        {
+          "status": "PASS",
+          "message": "AbortFlag: после request операции прерываются"
+        },
+        {
+          "status": "PASS",
+          "message": "MultiSelect: по умолчанию отмечены все"
+        },
+        {
+          "status": "PASS",
+          "message": "MultiSelect: снятие отметки (пробел)"
+        },
+        {
+          "status": "PASS",
+          "message": "MultiSelect: повторная отметка"
+        },
+        {
+          "status": "PASS",
+          "message": "MultiSelect: снять все (клавиша A)"
+        },
+        {
+          "status": "PASS",
+          "message": "MultiSelect: selected_indices (множественный выбор)"
+        },
+        {
+          "status": "PASS",
+          "message": "MultiSelect: курсор + переключение текущей строки"
+        },
+        {
+          "status": "PASS",
+          "message": "MultiSelect: курсор не выходит за границы"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4: по умолчанию отмечен только конфигурационный раздел"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4: A отмечает только выбираемые строки"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4: A снимает все выбираемые, недоступная не меняется"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: записи сгруппированы по устройству (заголовки)"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: префиксы дерева (первый без префикса, последний └─)"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: у выбираемой строки обозначение устройство[subvol]"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: у недоступной строки причина, а не обозначение"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: ширина левой колонки — по самой длинной метке"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: метка выровнена до общей ширины колонки"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: точечные каталоги (.snapshots) в конце группы"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4: источник конфигурации в начале списка, отмечен и выбирается"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: порядок списка совпадает с порядком отображения (номера CLI подряд, курсор TUI без перескоков)"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4: источник конфигурации не дублируется обнаруженным"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: не-Btrfs раздел (vfat) не показывается вовсе"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: обнаруженный subvolume выбирается, с устройством и обозначением"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.1: у источника конфигурации тоже устройство и обозначение"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4: несмонтированный Btrfs виден с причиной"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.2 TUI: предотметка только у выбираемых конфигурационных"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.2: на ВМ без Btrfs источник конфигурации [–] с причиной"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.2: у недоступного источника нет устройства"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.2: группа без устройства подписана «(точка монтирования не найдена)»"
+        },
+        {
+          "status": "PASS",
+          "message": "1.4.2 TUI: на ВМ без Btrfs ничего не отмечено — Enter не продолжит операцию"
+        },
+        {
+          "status": "PASS",
+          "message": "простой CLI доступен (fallback без curses, ТЗ 2.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "выбор subvolume есть в обоих интерфейсах (1.2)"
+        },
+        {
+          "status": "PASS",
+          "message": "dialogs.confirm при EOF -> отказ"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: Y в любом регистре — да"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: N в любом регистре — нет"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: кириллическая Д тоже принимается"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: кириллическая Н тоже принимается"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: кириллическая у/У (фонетический аналог y) — да (v1.4.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: цифра 1 — да (раскладконезависимый ответ)"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: цифра 2 — нет (раскладконезависимый ответ)"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: Enter — значение по умолчанию"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: Esc/Q — отказ (безопасное умолчание)"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: нераспознанная клавиша игнорируется, а не ответ"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: построчный fallback принимает yes/да/у/1 и пустую строку"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: подсказка [1=Да, 2=Нет] + Enter — Да (v1.4.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "confirm: подсказка [1=Да, 2=Нет] + Enter — Нет (v1.4.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI confirm: кнопки [1] Да / [2] Нет + Enter — Да (v1.4.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI confirm: кнопки видны и при умолчании Нет (v1.4.3)"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI confirm: пояснение про одну клавишу не возвращено"
+        },
+        {
+          "status": "PASS",
+          "message": "главное меню: 4 пункта, у каждого своя клавиша (1-3 — пункты, q — выход; ТЗ 1.4.7 §7.1)"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.1: строка внутреннего имени профиля удалена"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.2: подпись «Отправлено на сетевую шару» на месте"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.2: счетчик — реально подтвержденные сетевые копии (архивы на шаре), не локальные созданные"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.2: без смонтированной шары число не выдумывается"
+        },
+        {
+          "status": "PASS",
+          "message": "счетчик ожидающих отправки сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.5: одиночный Esc — выход после одного getch (без ожидания второй клавиши)"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.5: стрелка обрабатывается, затем Esc — выход"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.5: q — выход одним нажатием"
+        },
+        {
+          "status": "PASS",
+          "message": "§6: индивидуальный каталог на правильной Btrfs подставлен автоматически и проверен повторно"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: снапшот показывается с источником и датой"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: старый архив без sidecar получает дату из имени, а проверка честно помечается как не проводившаяся"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: дата старого архива извлекается из имени при отсутствии метаданных"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: состояние проверки и сетевой отправки из метаданных"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: дата ISO 8601 из метаданных корректно отображается"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: несколько путей к одному объекту не дублируют архив в списке"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: строки списка каталогов присутствуют"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: каталоги снапшотов обнаруживаются на всех Btrfs"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: локальные архивы обнаруживаются на всех Btrfs"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: снапшоты показаны с группировкой по устройствам"
+        },
+        {
+          "status": "PASS",
+          "message": "§4.3: архивы показаны с группировкой по устройствам"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: E на итоговом экране открывает редактирование и повторную проверку"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: меню локальных копий содержит два типа объектов"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: выбор категории сразу открывает список выбора объектов"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: Esc отменяет ручной ввод и возвращает назад"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: несколько отметок сохраняются после отмены подтверждения"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: U возвращает действие отправки отмеченного набора архивов"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: автозагрузка отключается только для текущей операции"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: автозагрузка включается для запуска без изменения конфига"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: одинаковые имена subvolume различаются по пути, не source_2"
+        },
+        {
+          "status": "PASS",
+          "message": "§10: длинное сообщение upload-pending переносится для узкого терминала"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI restore: локальные архивы собираются со всех обнаруженных каталогов"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI restore: локальные снапшоты собираются со всех Btrfs-каталогов"
+        },
+        {
+          "status": "PASS",
+          "message": "TUI: редактор каталогов использует Esc без лишней кнопки Назад"
+        }
+      ]
+    },
+    {
+      "module": "test_deletion",
+      "status": "OK",
+      "elapsed_sec": 3.3,
+      "results": [
+        {
+          "status": "PASS",
+          "message": "часть архивов — одного подтверждения достаточно"
+        },
+        {
+          "status": "PASS",
+          "message": "удаление ВСЕХ архивов требует повторного подтверждения"
+        },
+        {
+          "status": "PASS",
+          "message": "затронута последняя копия subvolume — повторное подтверждение"
+        },
+        {
+          "status": "PASS",
+          "message": "пустой список не требует подтверждения"
+        },
+        {
+          "status": "PASS",
+          "message": "input подменен"
+        },
+        {
+          "status": "PASS",
+          "message": "выбор номерами и диапазонами ('1,3-5')"
+        },
+        {
+          "status": "PASS",
+          "message": "'a' выбирает все"
+        },
+        {
+          "status": "PASS",
+          "message": "некорректные номера пропускаются"
+        },
+        {
+          "status": "PASS",
+          "message": "Enter — отмена выбора"
+        },
+        {
+          "status": "PASS",
+          "message": "по имени файла находится ровно один архив"
+        },
+        {
+          "status": "PASS",
+          "message": "имя без суффикса сжатия опознается"
+        },
+        {
+          "status": "PASS",
+          "message": "полный путь внутри каталога принимается"
+        },
+        {
+          "status": "PASS",
+          "message": "абсолютный путь за пределами backup_dir отклоняется"
+        },
+        {
+          "status": "PASS",
+          "message": "delete-archives --yes не удаляет внешний файл"
+        },
+        {
+          "status": "PASS",
+          "message": "символическая ссылка на внешний файл отклоняется"
+        },
+        {
+          "status": "PASS",
+          "message": "несуществующее имя попадает в missing"
+        },
+        {
+          "status": "PASS",
+          "message": "v1.3: архив создан с префиксом хоста (testhost_root_...)"
+        },
+        {
+          "status": "PASS",
+          "message": "имя с хостом разбирается: хост и subvolume распознаны"
+        },
+        {
+          "status": "PASS",
+          "message": "v1.3: .sha256 не создается"
+        },
+        {
+          "status": "PASS",
+          "message": "SHA-256 хранится в JSON-метаданных"
+        },
+        {
+          "status": "PASS",
+          "message": "архив с хостом удален (delete_local_archive)"
+        },
+        {
+          "status": "PASS",
+          "message": "метаданные удалены вместе с архивом"
+        },
+        {
+          "status": "PASS",
+          "message": "снапшот при удалении архива не затрагивается"
+        },
+        {
+          "status": "PASS",
+          "message": "delete-archives --archive ... --yes -> 0"
+        },
+        {
+          "status": "PASS",
+          "message": "указанный архив удален"
+        },
+        {
+          "status": "PASS",
+          "message": "sidecar-файлы удаленного архива также удалены"
+        },
+        {
+          "status": "PASS",
+          "message": "остальные архивы не затронуты"
+        },
+        {
+          "status": "PASS",
+          "message": "итог удаления напечатан"
+        },
+        {
+          "status": "PASS",
+          "message": "--all без --yes отклонено (ТЗ 14)"
+        },
+        {
+          "status": "PASS",
+          "message": "только несуществующие имена -> код 1, ничего не удалено"
+        },
+        {
+          "status": "PASS",
+          "message": "CLI: выбранная единица удалена, остальные на месте"
+        },
+        {
+          "status": "PASS",
+          "message": "CLI: отказ в подтверждении сохраняет архив"
+        },
+        {
+          "status": "PASS",
+          "message": "CLI: выбранный снапшот удален, второй сохранен"
+        },
+        {
+          "status": "PASS",
+          "message": "CLI: отказ в подтверждении сохраняет снапшот"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "PASS": 517,
+    "FAIL": 0,
+    "SKIP": 1
+  },
+  "finished": "2026-11-24T15:12:09",
+  "ok": true
+}
